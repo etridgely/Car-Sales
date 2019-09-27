@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
@@ -6,6 +6,7 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
 const App = () => {
+
   const state = {
     additionalPrice: 0,
     car: {
@@ -25,10 +26,18 @@ const App = () => {
 
   const removeFeature = item => {
     // dispatch an action here to remove an item
+    dispatch({
+      type: "REMOVE_CAR_FEATURES",
+      payload: item
+    })
   };
 
   const buyItem = item => {
     // dipsatch an action here to add an item
+    dispatch({
+      type: "ADD_CAR_FEATURES",
+      payload: item
+    })
   };
 
   return (
