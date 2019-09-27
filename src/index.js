@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { carReducer } from './reducers/index';
+import { carReducer } from './reducers';
 
 import 'bulma/css/bulma.css';
 import './styles.scss';
-import { carReducer } from './reducers';
+
 
 const store = createStore(carReducer)
 
